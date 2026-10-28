@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from django.http import JsonResponse
 
-# Create your views here.
+
+def home(request):
+    data = {
+        "message": "Welcome to Mini Postman!",
+        "status": "success",
+        "project": "Mini Postman API Tester"
+    }
+
+    return JsonResponse(data)
